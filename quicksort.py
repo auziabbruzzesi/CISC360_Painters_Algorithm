@@ -7,9 +7,9 @@ def quickSort(arr):
     else:
         pivot = arr[0]
         for i in arr:
-            if i < pivot:
+            if i.getZval() < pivot.getZval():
                 less.append(i)
-            elif i > pivot:
+            elif i.getZval() > pivot.getZval():
                 more.append(i)
             else:
                 pivotList.append(i)

@@ -2,3 +2,4 @@
 CISC36017F Class project
 Group Members:
 Jacob McConomy
+Sam Kossey

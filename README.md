@@ -1,3 +1,4 @@
 # CISC360_Painters_Algorithm
 CISC36017F Class project
-test
+Group Members:
+Jacob McConomy

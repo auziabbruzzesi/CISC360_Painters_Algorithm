@@ -16,3 +16,4 @@ def quickSort(arr):
         less = quickSort(less)
         more = quickSort(more)
         return less + pivotList + more
+        

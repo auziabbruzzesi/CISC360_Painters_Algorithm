@@ -11,7 +11,7 @@ class Shape:
     def printZval(self): print(self.zval)
     def getZval(self): return self.zval
     def getGraphic(self): return self.graphic
-    r.seed(100000)
+    r.seed(15)
     # Create based on class name:
     def factory(type):
         

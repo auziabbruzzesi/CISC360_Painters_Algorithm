@@ -182,8 +182,8 @@ BAD_OPTION = "Illegal option value"
 ##########################################################################
 # global variables and funtions
 
-_root = tk.Tk()
-_root.withdraw()
+#_root = tk.Tk()
+#_root.withdraw()
 
 _update_lasttime = time.time()
 
@@ -198,7 +198,7 @@ def update(rate=None):
         else:
             _update_lasttime = now
 
-    _root.update()
+    #_root.update()
 
 ############################################################################
 # Graphics classes start here

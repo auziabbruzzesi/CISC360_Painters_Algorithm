@@ -56,7 +56,7 @@ def main():
     a = np.array(shapez,dtype=np.int32)
     print(shapedict)
     print(a)
-    quicksort_c(a)
+    quickSort(a)
     print(a)
     
     

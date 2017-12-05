@@ -7,6 +7,9 @@ Natalie Rubin
 Jael Flaquer
 Austin Abbruzzesi
 
-Questions:
-1. Is it okay if each shape only has 1 Z-value?
-    Sunita says: It is safe to assume that each shape only has 1 Z-value
+About:
+This is a test of Painter's Algorithm with Python, Python+C via Cython, and Python+C+OMP. 
+
+How to Build/Run:
+make all will build the C and C+OMP extension, and run the timing experiments -- 
+when running on the class machine, the code will execute with slurm with 10 threads.

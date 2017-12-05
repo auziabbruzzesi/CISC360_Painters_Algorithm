@@ -3,7 +3,7 @@ from graphics import*
 from cy_quicksort import *
 from quicksort import *
 from omp_cy_quicksort import *
-import Gnuplot
+
 import numpy as np
 import time
 import random

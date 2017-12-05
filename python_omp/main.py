@@ -1,6 +1,6 @@
 from factory import*
 from graphics import*
-from cy_quicksort import *
+#from cy_quicksort import *
 from quicksort import *
 from omp_cy_quicksort import *
 import Gnuplot
@@ -38,21 +38,19 @@ def time_trial(num_shapes):
     def time_py():
         quickSort(zval_python)
     def time_py_c():
-        quicksort_c(zval_python_c)
+        omp_quicksort_c(zval_python_c)
     def time_py_omp():
-        omp_quicksort_c(zval_python_omp)
+        return 0
     
     tp = timeit.Timer(time_py)
     tpc = timeit.Timer(time_py_c)
-    tpo = timeit.Timer(time_py_omp)
     avgtp = tp.timeit(500)/500
     avgtpc = tpc.timeit(500)/500
-    avgtpo = tpo.timeit(500)/500
-    
+    #tpo = timeit.Timer(time_py_omp)
    
     print(num_shapes)
 
-    return(avgtp,avgtpc,avgtpo)
+    return(avgtp,avgtpc)
     
 
 for i in range(13):
@@ -61,8 +59,6 @@ for i in range(13):
     print(tup[0])
     print("PY + C"),
     print(tup[1])
-    print("PY + C + OMP"),
-    print(tup[2])
     print("SPEEDUP---"),
     print(tup[0]/tup[1])
     print("\n\n\n")

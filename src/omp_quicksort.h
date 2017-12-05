@@ -1,0 +1,1 @@
+void omp_quick_sort (int* a, int n);

@@ -3,7 +3,8 @@ HOST := $(shell hostname)
 ifeq ($(HOST),cisc360)
 RUN = srun -c 10
 else
-RUN = 
+RUN =
+endif 
 all: clean build
 	$(RUN) python main.py
 clean:

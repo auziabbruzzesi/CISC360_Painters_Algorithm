@@ -45,7 +45,7 @@ def shapeNameGen(n):
         yield r.choice(types)
 
 def generate_shape_dictionary(n):
-    print("\tpopulating dictionary")
+   # print("\tpopulating dictionary")
     #print("GENERATING SHAPE DICTIONARY....."),
     shapes = dict()
     k = 1
@@ -62,7 +62,7 @@ def generate_shape_dictionary(n):
             
            
     #print("DONE\n")
-    print("\tdone")
+    #print("\tdone")
     return shapes
 
 

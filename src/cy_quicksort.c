@@ -4,24 +4,18 @@
 {
     "distutils": {
         "depends": [
-            "omp_quicksort.h"
-        ], 
-        "extra_compile_args": [
-            "-fopenmp"
-        ], 
-        "extra_link_args": [
-            "-fopenmp"
+            "quicksort.h"
         ], 
         "include_dirs": [
             "."
         ], 
-        "name": "omp_cy_quicksort", 
+        "name": "cy_quicksort", 
         "sources": [
-            "omp_cy_quicksort.pyx", 
-            "omp_quicksort.c"
+            "cy_quicksort.pyx", 
+            "quicksort.c"
         ]
     }, 
-    "module_name": "omp_cy_quicksort"
+    "module_name": "cy_quicksort"
 }
 END: Cython Metadata */
 
@@ -543,9 +537,9 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__omp_cy_quicksort
-#define __PYX_HAVE_API__omp_cy_quicksort
-#include "omp_quicksort.h"
+#define __PYX_HAVE__cy_quicksort
+#define __PYX_HAVE_API__cy_quicksort
+#include "quicksort.h"
 #include "pythread.h"
 #include <string.h>
 #include <stdlib.h>
@@ -754,7 +748,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "omp_cy_quicksort.pyx",
+  "cy_quicksort.pyx",
   "stringsource",
 };
 /* MemviewSliceStruct.proto */
@@ -1545,9 +1539,9 @@ static PyObject *__pyx_memoryview_assign_item_from_object(struct __pyx_memoryvie
 static PyObject *__pyx_memoryviewslice_convert_item_to_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp); /* proto*/
 static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memoryviewslice_obj *__pyx_v_self, char *__pyx_v_itemp, PyObject *__pyx_v_value); /* proto*/
 
-/* Module declarations from 'omp_quicksort' */
+/* Module declarations from 'quicksort' */
 
-/* Module declarations from 'omp_cy_quicksort' */
+/* Module declarations from 'cy_quicksort' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1593,11 +1587,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_int = { "int", NULL, sizeof(int), { 0 }, 0, IS_UNSIGNED(int) ? 'U' : 'I', IS_UNSIGNED(int), 0 };
-#define __Pyx_MODULE_NAME "omp_cy_quicksort"
-extern int __pyx_module_is_main_omp_cy_quicksort;
-int __pyx_module_is_main_omp_cy_quicksort = 0;
+#define __Pyx_MODULE_NAME "cy_quicksort"
+extern int __pyx_module_is_main_cy_quicksort;
+int __pyx_module_is_main_cy_quicksort = 0;
 
-/* Implementation of 'omp_cy_quicksort' */
+/* Implementation of 'cy_quicksort' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
 static PyObject *__pyx_builtin_enumerate;
@@ -1656,6 +1650,8 @@ static const char __pyx_k_pyx_result[] = "__pyx_result";
 static const char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static const char __pyx_k_MemoryError[] = "MemoryError";
 static const char __pyx_k_PickleError[] = "PickleError";
+static const char __pyx_k_quicksort_c[] = "quicksort_c";
+static const char __pyx_k_cy_quicksort[] = "cy_quicksort";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_stringsource[] = "stringsource";
 static const char __pyx_k_pyx_getbuffer[] = "__pyx_getbuffer";
@@ -1663,14 +1659,12 @@ static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
 static const char __pyx_k_View_MemoryView[] = "View.MemoryView";
 static const char __pyx_k_allocate_buffer[] = "allocate_buffer";
 static const char __pyx_k_dtype_is_object[] = "dtype_is_object";
-static const char __pyx_k_omp_quicksort_c[] = "omp_quicksort_c";
 static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
-static const char __pyx_k_omp_cy_quicksort[] = "omp_cy_quicksort";
+static const char __pyx_k_cy_quicksort_pyx[] = "cy_quicksort.pyx";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
-static const char __pyx_k_omp_cy_quicksort_pyx[] = "omp_cy_quicksort.pyx";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
@@ -1722,6 +1716,8 @@ static PyObject *__pyx_n_s_class;
 static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_kp_s_contiguous_and_direct;
 static PyObject *__pyx_kp_s_contiguous_and_indirect;
+static PyObject *__pyx_n_s_cy_quicksort;
+static PyObject *__pyx_kp_s_cy_quicksort_pyx;
 static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_dtype_is_object;
 static PyObject *__pyx_n_s_encode;
@@ -1746,9 +1742,6 @@ static PyObject *__pyx_n_s_ndim;
 static PyObject *__pyx_n_s_new;
 static PyObject *__pyx_kp_s_no_default___reduce___due_to_non;
 static PyObject *__pyx_n_s_obj;
-static PyObject *__pyx_n_s_omp_cy_quicksort;
-static PyObject *__pyx_kp_s_omp_cy_quicksort_pyx;
-static PyObject *__pyx_n_s_omp_quicksort_c;
 static PyObject *__pyx_n_s_pack;
 static PyObject *__pyx_n_s_pickle;
 static PyObject *__pyx_n_s_pyx_PickleError;
@@ -1759,6 +1752,7 @@ static PyObject *__pyx_n_s_pyx_state;
 static PyObject *__pyx_n_s_pyx_type;
 static PyObject *__pyx_n_s_pyx_unpickle_Enum;
 static PyObject *__pyx_n_s_pyx_vtable;
+static PyObject *__pyx_n_s_quicksort_c;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
@@ -1780,7 +1774,7 @@ static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_pf_16omp_cy_quicksort_omp_quicksort_c(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a); /* proto */
+static PyObject *__pyx_pf_12cy_quicksort_quicksort_c(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -1860,50 +1854,50 @@ static PyObject *__pyx_tuple__27;
 static PyObject *__pyx_codeobj__21;
 static PyObject *__pyx_codeobj__28;
 
-/* "omp_cy_quicksort.pyx":5
- * cimport omp_quicksort
+/* "cy_quicksort.pyx":5
+ * cimport quicksort
  * 
- * def omp_quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
- *     omp_quicksort.omp_quick_sort(&a[0], a.size)
+ * def quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
+ *     quicksort.quick_sort(&a[0], a.size)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_16omp_cy_quicksort_1omp_quicksort_c(PyObject *__pyx_self, PyObject *__pyx_arg_a); /*proto*/
-static PyMethodDef __pyx_mdef_16omp_cy_quicksort_1omp_quicksort_c = {"omp_quicksort_c", (PyCFunction)__pyx_pw_16omp_cy_quicksort_1omp_quicksort_c, METH_O, 0};
-static PyObject *__pyx_pw_16omp_cy_quicksort_1omp_quicksort_c(PyObject *__pyx_self, PyObject *__pyx_arg_a) {
+static PyObject *__pyx_pw_12cy_quicksort_1quicksort_c(PyObject *__pyx_self, PyObject *__pyx_arg_a); /*proto*/
+static PyMethodDef __pyx_mdef_12cy_quicksort_1quicksort_c = {"quicksort_c", (PyCFunction)__pyx_pw_12cy_quicksort_1quicksort_c, METH_O, 0};
+static PyObject *__pyx_pw_12cy_quicksort_1quicksort_c(PyObject *__pyx_self, PyObject *__pyx_arg_a) {
   __Pyx_memviewslice __pyx_v_a = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("omp_quicksort_c (wrapper)", 0);
+  __Pyx_RefNannySetupContext("quicksort_c (wrapper)", 0);
   assert(__pyx_arg_a); {
     __pyx_v_a = __Pyx_PyObject_to_MemoryviewSlice_dc_int(__pyx_arg_a); if (unlikely(!__pyx_v_a.memview)) __PYX_ERR(0, 5, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
-  __Pyx_AddTraceback("omp_cy_quicksort.omp_quicksort_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cy_quicksort.quicksort_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_16omp_cy_quicksort_omp_quicksort_c(__pyx_self, __pyx_v_a);
+  __pyx_r = __pyx_pf_12cy_quicksort_quicksort_c(__pyx_self, __pyx_v_a);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_16omp_cy_quicksort_omp_quicksort_c(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a) {
+static PyObject *__pyx_pf_12cy_quicksort_quicksort_c(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   Py_ssize_t __pyx_t_1;
   int __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  __Pyx_RefNannySetupContext("omp_quicksort_c", 0);
+  __Pyx_RefNannySetupContext("quicksort_c", 0);
 
-  /* "omp_cy_quicksort.pyx":6
+  /* "cy_quicksort.pyx":6
  * 
- * def omp_quicksort_c(int[::1] a):
- *     omp_quicksort.omp_quick_sort(&a[0], a.size)             # <<<<<<<<<<<<<<
+ * def quicksort_c(int[::1] a):
+ *     quicksort.quick_sort(&a[0], a.size)             # <<<<<<<<<<<<<<
  */
   __pyx_t_1 = 0;
   __pyx_t_2 = -1;
@@ -1922,13 +1916,13 @@ static PyObject *__pyx_pf_16omp_cy_quicksort_omp_quicksort_c(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_2 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  omp_quick_sort((&(*((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_a.data) + __pyx_t_1)) )))), __pyx_t_2);
+  quick_sort((&(*((int *) ( /* dim=0 */ ((char *) (((int *) __pyx_v_a.data) + __pyx_t_1)) )))), __pyx_t_2);
 
-  /* "omp_cy_quicksort.pyx":5
- * cimport omp_quicksort
+  /* "cy_quicksort.pyx":5
+ * cimport quicksort
  * 
- * def omp_quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
- *     omp_quicksort.omp_quick_sort(&a[0], a.size)
+ * def quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
+ *     quicksort.quick_sort(&a[0], a.size)
  */
 
   /* function exit code */
@@ -1937,7 +1931,7 @@ static PyObject *__pyx_pf_16omp_cy_quicksort_omp_quicksort_c(CYTHON_UNUSED PyObj
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("omp_cy_quicksort.omp_quicksort_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cy_quicksort.quicksort_c", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_a, 1);
@@ -14875,7 +14869,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "omp_cy_quicksort.array", /*tp_name*/
+  "cy_quicksort.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -14983,7 +14977,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "omp_cy_quicksort.Enum", /*tp_name*/
+  "cy_quicksort.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -15233,7 +15227,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "omp_cy_quicksort.memoryview", /*tp_name*/
+  "cy_quicksort.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -15360,7 +15354,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "omp_cy_quicksort._memoryviewslice", /*tp_name*/
+  "cy_quicksort._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -15431,17 +15425,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_omp_cy_quicksort(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_cy_quicksort(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_omp_cy_quicksort},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_cy_quicksort},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "omp_cy_quicksort",
+    "cy_quicksort",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -15491,6 +15485,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
   {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
   {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
+  {&__pyx_n_s_cy_quicksort, __pyx_k_cy_quicksort, sizeof(__pyx_k_cy_quicksort), 0, 0, 1, 1},
+  {&__pyx_kp_s_cy_quicksort_pyx, __pyx_k_cy_quicksort_pyx, sizeof(__pyx_k_cy_quicksort_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
   {&__pyx_n_s_dtype_is_object, __pyx_k_dtype_is_object, sizeof(__pyx_k_dtype_is_object), 0, 0, 1, 1},
   {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
@@ -15515,9 +15511,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_new, __pyx_k_new, sizeof(__pyx_k_new), 0, 0, 1, 1},
   {&__pyx_kp_s_no_default___reduce___due_to_non, __pyx_k_no_default___reduce___due_to_non, sizeof(__pyx_k_no_default___reduce___due_to_non), 0, 0, 1, 0},
   {&__pyx_n_s_obj, __pyx_k_obj, sizeof(__pyx_k_obj), 0, 0, 1, 1},
-  {&__pyx_n_s_omp_cy_quicksort, __pyx_k_omp_cy_quicksort, sizeof(__pyx_k_omp_cy_quicksort), 0, 0, 1, 1},
-  {&__pyx_kp_s_omp_cy_quicksort_pyx, __pyx_k_omp_cy_quicksort_pyx, sizeof(__pyx_k_omp_cy_quicksort_pyx), 0, 0, 1, 0},
-  {&__pyx_n_s_omp_quicksort_c, __pyx_k_omp_quicksort_c, sizeof(__pyx_k_omp_quicksort_c), 0, 0, 1, 1},
   {&__pyx_n_s_pack, __pyx_k_pack, sizeof(__pyx_k_pack), 0, 0, 1, 1},
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_PickleError, __pyx_k_pyx_PickleError, sizeof(__pyx_k_pyx_PickleError), 0, 0, 1, 1},
@@ -15528,6 +15521,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pyx_type, __pyx_k_pyx_type, sizeof(__pyx_k_pyx_type), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_unpickle_Enum, __pyx_k_pyx_unpickle_Enum, sizeof(__pyx_k_pyx_unpickle_Enum), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
+  {&__pyx_n_s_quicksort_c, __pyx_k_quicksort_c, sizeof(__pyx_k_quicksort_c), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
@@ -15772,16 +15766,16 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
 
-  /* "omp_cy_quicksort.pyx":5
- * cimport omp_quicksort
+  /* "cy_quicksort.pyx":5
+ * cimport quicksort
  * 
- * def omp_quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
- *     omp_quicksort.omp_quick_sort(&a[0], a.size)
+ * def quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
+ *     quicksort.quick_sort(&a[0], a.size)
  */
   __pyx_tuple__20 = PyTuple_Pack(2, __pyx_n_s_a, __pyx_n_s_a); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_omp_cy_quicksort_pyx, __pyx_n_s_omp_quicksort_c, 5, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_cy_quicksort_pyx, __pyx_n_s_quicksort_c, 5, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 5, __pyx_L1_error)
 
   /* "View.MemoryView":284
  *         return self.name
@@ -15866,11 +15860,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initomp_cy_quicksort(void); /*proto*/
-PyMODINIT_FUNC initomp_cy_quicksort(void)
+PyMODINIT_FUNC initcy_quicksort(void); /*proto*/
+PyMODINIT_FUNC initcy_quicksort(void)
 #else
-PyMODINIT_FUNC PyInit_omp_cy_quicksort(void); /*proto*/
-PyMODINIT_FUNC PyInit_omp_cy_quicksort(void)
+PyMODINIT_FUNC PyInit_cy_quicksort(void); /*proto*/
+PyMODINIT_FUNC PyInit_cy_quicksort(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -15910,7 +15904,7 @@ bad:
 }
 
 
-static int __pyx_pymod_exec_omp_cy_quicksort(PyObject *__pyx_pyinit_module)
+static int __pyx_pymod_exec_cy_quicksort(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -15929,7 +15923,7 @@ static int __pyx_pymod_exec_omp_cy_quicksort(PyObject *__pyx_pyinit_module)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_omp_cy_quicksort(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_cy_quicksort(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -15965,7 +15959,7 @@ static int __pyx_pymod_exec_omp_cy_quicksort(PyObject *__pyx_pyinit_module)
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("omp_cy_quicksort", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("cy_quicksort", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -15984,14 +15978,14 @@ static int __pyx_pymod_exec_omp_cy_quicksort(PyObject *__pyx_pyinit_module)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_omp_cy_quicksort) {
+  if (__pyx_module_is_main_cy_quicksort) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "omp_cy_quicksort")) {
-      if (unlikely(PyDict_SetItemString(modules, "omp_cy_quicksort", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "cy_quicksort")) {
+      if (unlikely(PyDict_SetItemString(modules, "cy_quicksort", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -16050,21 +16044,21 @@ static int __pyx_pymod_exec_omp_cy_quicksort(PyObject *__pyx_pyinit_module)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "omp_cy_quicksort.pyx":5
- * cimport omp_quicksort
+  /* "cy_quicksort.pyx":5
+ * cimport quicksort
  * 
- * def omp_quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
- *     omp_quicksort.omp_quick_sort(&a[0], a.size)
+ * def quicksort_c(int[::1] a):             # <<<<<<<<<<<<<<
+ *     quicksort.quick_sort(&a[0], a.size)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_16omp_cy_quicksort_1omp_quicksort_c, NULL, __pyx_n_s_omp_cy_quicksort); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12cy_quicksort_1quicksort_c, NULL, __pyx_n_s_cy_quicksort); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_omp_quicksort_c, __pyx_t_1) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_quicksort_c, __pyx_t_1) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "omp_cy_quicksort.pyx":1
+  /* "cy_quicksort.pyx":1
  * #//Quick sort implementation found on StackOverflow             # <<<<<<<<<<<<<<
  * #//https://stackoverflow.com/questions/36503828/cython-memoryviews-wrapping-c-function-with-array-parameter-to-pass-numpy-array
- * cimport omp_quicksort
+ * cimport quicksort
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -16231,11 +16225,11 @@ static int __pyx_pymod_exec_omp_cy_quicksort(PyObject *__pyx_pyinit_module)
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init omp_cy_quicksort", 0, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init cy_quicksort", 0, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init omp_cy_quicksort");
+    PyErr_SetString(PyExc_ImportError, "init cy_quicksort");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

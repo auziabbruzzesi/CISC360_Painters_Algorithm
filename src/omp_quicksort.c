@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include<omp.h>
-
+//OMP Quicksort implementation Found on GitHub
+//https://github.com/pHag/id1217/blob/master/hw2/ex2/quickSort-openmp.c
+//
 
 //void omp_quick_sort (int* a, int n) {
 
